@@ -1,17 +1,37 @@
 <head>
-<link rel="stylesheet" href="style.css">
-body {
+* {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.video-background {
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.video-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow: hidden;
     z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Muda a cor do texto pra branco */
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    padding-top: 20vh; /* Ajusta o texto pra não ficar grudado no topo */
 }
