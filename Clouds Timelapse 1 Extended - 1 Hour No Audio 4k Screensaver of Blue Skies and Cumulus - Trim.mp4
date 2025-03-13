@@ -22,7 +22,7 @@ body {
 .video-container video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz o vídeo cobrir toda a tela */
+    object-fit: cover;
 }
 
 .content {
@@ -32,7 +32,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente pra destacar o texto */
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
