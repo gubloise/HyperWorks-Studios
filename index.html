@@ -4,82 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperWorks Studios</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin-left: 20px;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: url('fundo.jpg') no-repeat center center/cover;
+        }
+        .hero-text {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ffaa00;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <video autoplay muted loop id="video-bg">
-        <source src="background.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos.
-         <source src="background.mp4" type="video/mp4">
-    </video>
-         <source src="background.mp4" type="video/mp4">
-
-         <h1>HyperWorks Studios</h1>
-    <div class="overlay"></div>
-         Seu navegador não suporta vídeos.
-
-         Seu navegador não suporta vídeos.
     <header>
-         <h1>HyperWorks Studios</h1>
         <h1>HyperWorks Studios</h1>
-     </video>
-    </header>
-     </video>
-
         <nav>
-    <main>
-
-        <h2>Bem-vindo ao nosso site!</h2>
-
-        <p>Estamos desenvolvendo grandes projetos. Fique ligado!</p>
             <ul>
-        <a href="#" class="btn">Saiba Mais</a>
-     <div class="overlay"></div>
-    </main>
-     <div class="overlay"></div>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Bem-vindo ao nosso site!</h2>
+            <p>Estamos desenvolvendo grandes projetos. Fique ligado!</p>
+            <a href="#projetos" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+    </script>
 </body>
-                <li><a href="#">Início</a></li>
 </html>
-
-
-                <li><a href="#">Projetos</a></li>
-     <header>
-     <header>
-                <li><a href="#">Contato</a></li>
-         <h1>HyperWorks Studios</h1>
-         <h1>HyperWorks Studios</h1>
-            </ul>
-        </nav>
-            </ul>
-        </nav>
-        </nav>
-            </ul>
-        </nav>
-     </header>
-     </header>
-
-
-     <main>
-     <main>
-                <li><a href="#">Início</a></li>
- 
- 
-                <li><a href="#">Projetos</a></li>
-     <header>
-     <header>
-                <li><a href="#">Contato</a></li>
-         <h1>HyperWorks Studios</h1>
-         <h1>HyperWorks Studios</h1>
-            </ul>
-        </nav>
-            </ul>
-        </nav>
-        </nav>
-            </ul>
-        </nav>
-     </header>
-     </header>
- 
- 
-     <main>
-     <main>
