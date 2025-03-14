@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperWorks Studios</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav>
             <img src="2 Sem Título_20250311220051.png" alt="HyperWorks Studios" class="logo">
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#">Jogos</a></li>
                 <li><a href="#">Notícias</a></li>
                 <li><a href="#">Loja</a></li>
@@ -24,13 +23,13 @@
     </header>
     
     <footer>
-        <div class="socials">
+        <div class="social-section">
             <p>Conheça também as nossas redes sociais!</p>
-            <div class="icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <div class="social-icons">
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+                <a href="#"><img src="x.png" alt="X"></a>
             </div>
         </div>
         <div class="copyright">
@@ -39,78 +38,3 @@
     </footer>
 </body>
 </html>
-
-/* CSS - styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    height: 40px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: normal;
-}
-
-.login-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.socials p {
-    margin-bottom: 10px;
-}
-
-.icons a {
-    color: white;
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.copyright {
-    margin-top: 20px;
-}
