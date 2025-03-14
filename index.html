@@ -1,40 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperWorks Studios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo img {
+            height: 40px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .login-button {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .social-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .social-section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 30px;
+        }
+        .footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="2 Sem Título_20250311220051.png" alt="HyperWorks Studios">
+        </div>
         <nav>
-            <img src="2 Sem Título_20250311220051.png" alt="HyperWorks Studios" class="logo">
-            <ul>
-                <li><a href="#">Jogos</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Loja</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li><a href="#">Acessórios</a></li>
-                <li><a href="#">Serviços</a></li>
-            </ul>
-            <button class="login-btn">Iniciar sessão</button>
+            <a href="#">Jogos</a>
+            <a href="#">Notícias</a>
+            <a href="#">Loja</a>
+            <a href="#">Suporte</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Serviços</a>
         </nav>
+        <a href="#" class="login-button">Iniciar sessão</a>
     </header>
-    
-    <footer>
-        <div class="social-section">
-            <p>Conheça também as nossas redes sociais!</p>
-            <div class="social-icons">
-                <a href="#"><img src="instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="tiktok.png" alt="TikTok"></a>
-                <a href="#"><img src="x.png" alt="X"></a>
-            </div>
+    <div class="social-section">
+        <h2>Conheça também as nossas redes sociais!</h2>
+        <div class="social-icons">
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
         </div>
-        <div class="copyright">
-            <p>© 2025 HyperWorks Studios. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    </div>
+    <div class="footer">
+        &copy; 2025 HyperWorks Studios. Todos os direitos reservados.
+    </div>
 </body>
 </html>
