@@ -1,64 +1,85 @@
-nav {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    padding: 15px 50px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.logo img {
     height: 40px;
 }
 
-ul {
+.nav-links {
     display: flex;
-    list-style: none;
     gap: 20px;
 }
 
-ul li a {
+.nav-links a {
     text-decoration: none;
-    font-size: 16px;
     color: black;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .login-btn {
-    background: black;
+    background-color: black;
     color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.social-section {
-    padding: 20px;
-}
-
-.social-section p {
-    font-size: 18px;
-    margin-bottom: 10px;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
 }
 
 .social-icons img {
     height: 30px;
-    margin: 0 10px;
 }
 
 .copyright {
-    background: black;
+    background-color: black;
     color: white;
-    padding: 10px 0;
+    padding: 10px;
+    font-size: 14px;
 }
