@@ -67,3 +67,9 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Impede que arquivos de credenciais sejam enviados ao GitHub
+.env
+*.env
+/config/*.json
+/firebase-credentials.json
