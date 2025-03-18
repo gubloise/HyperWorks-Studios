@@ -73,3 +73,8 @@ node_modules/
 *.env
 /config/*.json
 /firebase-credentials.json
+
+firebase-key.json
+package-lock.json
+package.json
+server.js
