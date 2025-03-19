@@ -5,49 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperWorks Studios</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+    <script type="module" src="firebase-auth.js" defer></script>
 </head>
 <body>
+
     <header>
         <img src="assets/logo.png" alt="HyperWorks Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="suporte.html">Suporte</a></li>
+                <li><a href="pages/produtos.html">Produtos</a></li>
+                <li><a href="pages/suporte.html">Suporte</a></li>
                 <li><button id="login-btn">Iniciar Sessão</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Bem-vindo à HyperWorks Studios</h1>
-            <p>Desenvolvendo experiências incríveis para você!</p>
-            <button id="explore-btn">Explore Agora</button>
-        </section>
-
-        <section class="features">
-            <h2>Nossos Destaques</h2>
-            <div class="feature-item">
-                <h3>Jogos Inovadores</h3>
-                <p>Experimente jogos que desafiam os limites da imaginação.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Comunidade Ativa</h3>
-                <p>Junte-se a uma comunidade vibrante de jogadores.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Suporte 24/7</h3>
-                <p>Estamos aqui para ajudar você a qualquer momento.</p>
-            </div>
-        </section>
+        <h1>Bem-vindo à HyperWorks Studios</h1>
+        <p>Desenvolvendo experiências incríveis para você!</p>
+        <button id="botaoLogin">Iniciar Sessão com Google</button>
     </main>
 
-    <footer>
-        <p>&copy; 2025 HyperWorks Studios. Todos os direitos reservados.</p>
-    </footer>
-
-    <script type="module" src="js/script.js"></script>
-    <script type="module" src="js/firebase-auth.js"></script>
 </body>
 </html>
