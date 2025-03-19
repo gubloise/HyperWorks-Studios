@@ -1,11 +1,7 @@
-console.log("Firebase carregou:", firebase.apps.length > 0);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
 
-// Importa o Firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
-
-// Configuração do Firebase (Substitua com suas credenciais)
+// Configuração do Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBk1sihrx8Zdj5yQ-eb82nc0TFHUG865IQ",
   authDomain: "hyperworks-studios.firebaseapp.com",
@@ -16,51 +12,25 @@ const firebaseConfig = {
   measurementId: "G-Y5R259CL1V"
 };
 
-// Inicializa o Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
-// Função para login com Google
-async function loginComGoogle() {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    const user = result.user;
-
-    // Verifica se o usuário já tem um perfil no Firestore
-    const userRef = doc(db, "usuarios", user.uid);
-    const docSnap = await getDoc(userRef);
-
-    if (!docSnap.exists()) {
-      // Se não existir, pede nome e foto de perfil
-      const nome = prompt("Escolha seu nome de perfil:");
-      if (!nome) return alert("Nome de perfil não pode estar vazio!");
-
-      const foto = prompt("Cole o link da sua foto de perfil:");
-      if (!foto) return alert("Foto de perfil não pode estar vazia!");
-
-      // Salva no Firestore
-      await setDoc(userRef, {
-        nome: nome,
-        email: user.email,
-        fotoPerfil: foto,
-        dataCriacao: new Date(),
-      });
-    }
-
-    alert("Login realizado com sucesso!");
-  } catch (error) {
-    console.error("Erro no login:", error);
-    alert("Erro ao fazer login. Tente novamente.");
-  }
-}
-
-// Botão de login
-document.getElementById("botaoLogin").addEventListener("click", loginComGoogle);
-
-document.getElementById("googleLogin").addEventListener("click", () => {
-    console.log("Botão de login foi clicado!");
-    loginGoogle();
+// Função de login
+document.getElementById("login-btn").addEventListener("click", () => {
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            console.log("Usuário logado:", result.user);
+            window.location.href = "dashboard.html"; // Redireciona após login
+        })
+        .catch((error) => console.error("Erro no login:", error));
 });
 
+// Logout
+document.getElementById("logout-btn").addEventListener("click", () => {
+    signOut(auth).then(() => {
+        console.log("Usuário deslogado");
+        window.location.href = "index.html";
+    }).catch((error) => console.error("Erro ao deslogar:", error));
+});
