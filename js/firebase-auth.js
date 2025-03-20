@@ -1,7 +1,7 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
-// Configuração do Firebase
+// Configuração do Firebase (substitua pelos seus dados)
 const firebaseConfig = {
   apiKey: "AIzaSyBk1sihrx8Zdj5yQ-eb82nc0TFHUG865IQ",
   authDomain: "hyperworks-studios.firebaseapp.com",
@@ -12,25 +12,41 @@ const firebaseConfig = {
   measurementId: "G-Y5R259CL1V"
 };
 
-// Inicializa Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// Função de login
-document.getElementById("login-btn").addEventListener("click", () => {
-    signInWithPopup(auth, provider)
-        .then((result) => {
-            console.log("Usuário logado:", result.user);
-            window.location.href = "dashboard.html"; // Redireciona após login
-        })
-        .catch((error) => console.error("Erro no login:", error));
+// Elementos HTML
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const userInfo = document.getElementById("user-info");
+
+// Função de Login
+loginBtn.addEventListener("click", () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log("Usuário logado:", result.user);
+    })
+    .catch((error) => console.error(error));
 });
 
-// Logout
-document.getElementById("logout-btn").addEventListener("click", () => {
-    signOut(auth).then(() => {
-        console.log("Usuário deslogado");
-        window.location.href = "index.html";
-    }).catch((error) => console.error("Erro ao deslogar:", error));
+// Função de Logout
+logoutBtn.addEventListener("click", () => {
+  signOut(auth)
+    .then(() => console.log("Usuário saiu"))
+    .catch((error) => console.error(error));
+});
+
+// Verifica se o usuário está logado
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    loginBtn.style.display = "none";
+    logoutBtn.style.display = "block";
+    userInfo.innerHTML = `Logado como: ${user.displayName} <img src="${user.photoURL}" width="40" style="border-radius: 50%;">`;
+  } else {
+    loginBtn.style.display = "block";
+    logoutBtn.style.display = "none";
+    userInfo.innerHTML = "";
+  }
 });
