@@ -1,47 +1,156 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperWorks Studios</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
-    <script type="module" src="firebase-auth.js" defer></script>
-</head>
-    
-<body>
-  <header>
-    <h1>Hyperworks Studios</h1>
-  </header>
-  <main>
-    <section id="login-section">
-      <button id="login-btn">Login com Google</button>
-      <button id="logout-btn" style="display: none;">Sair</button>
-      <p id="user-info"></p>
-    </section>
-  </main>
 
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo da barra de navegação */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo */
+        .logo {
+            height: 40px;
+        }
+
+        /* Estilização do menu */
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Barra de pesquisa */
+        .search-bar {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        /* Botão de login */
+        .login-btn {
+            background-color: #0070d1;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegação -->
     <header>
-        <img src="assets/logo.png" alt="HyperWorks Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pages/produtos.html">Produtos</a></li>
-                <li><a href="pages/suporte.html">Suporte</a></li>
-                <li><button id="login-btn">Iniciar Sessão</button></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/PlayStation_2023_logo.svg/1280px-PlayStation_2023_logo.svg.png" alt="Logo PlayStation" class="logo"> 
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Jogos</a>
+                        <div class="dropdown-content">
+                            <a href="#">PS5</a>
+                            <a href="#">PS4</a>
+                            <a href="#">PC</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Serviços</a>
+                        <div class="dropdown-content">
+                            <a href="#">PS Plus</a>
+                            <a href="#">PS Now</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Loja</a>
+                        <div class="dropdown-content">
+                            <a href="#">Acessórios</a>
+                            <a href="#">Promoções</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Suporte</a>
+                        <div class="dropdown-content">
+                            <a href="#">Ajuda</a>
+                            <a href="#">Contato</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <input type="text" placeholder="Pesquisar..." class="search-bar">
+            <button class="login-btn">Iniciar sessão</button>
+        </div>
     </header>
 
-    <button id="login-btn">Login com Google</button>
-<button id="logout-btn" style="display: none;">Sair</button>
-<p id="user-info"></p>
-
-    <main>
-        <h1>Bem-vindo à HyperWorks Studios</h1>
-        <p>Desenvolvendo experiências incríveis para você!</p>
-        <button id="botaoLogin">Iniciar Sessão com Google</button>
-    </main>
+    <script>
+        // Deixa o menu dropdown ativar com hover no mobile
+        document.querySelectorAll('.dropdown').forEach(item => {
+            item.addEventListener('touchstart', () => {
+                let dropdown = item.querySelector('.dropdown-content');
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 
 </body>
 </html>
