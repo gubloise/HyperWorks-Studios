@@ -3,71 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Estilo PlayStation</title>
+    <title>Menu PlayStation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+<body>
 
-    <!-- Cabeçalho -->
-    <header style="display: flex; align-items: center; justify-content: space-between; padding: 15px; background: #fff; border-bottom: 1px solid #ddd;">
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/PlayStation_logo_colour.svg" alt="Logo" style="height: 30px;">
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/PlayStation_logo_colour.svg" alt="PlayStation Logo">
         </div>
 
-        <!-- Barra de navegação -->
         <nav>
-            <details style="display: inline-block; margin-right: 15px;">
-                <summary style="cursor: pointer;">Jogos</summary>
-                <ul style="list-style: none; padding: 10px; border: 1px solid #ddd; background: white; position: absolute;">
-                    <li>Explorar por gênero</li>
-                    <li>PlayStation Indies</li>
-                    <li>Grátis para Jogar</li>
-                    <li>Ofertas e promoções</li>
-                </ul>
-            </details>
-
-            <details style="display: inline-block; margin-right: 15px;">
-                <summary style="cursor: pointer;">PS5</summary>
-                <ul style="list-style: none; padding: 10px; border: 1px solid #ddd; background: white; position: absolute;">
-                    <li>Jogos de PS5</li>
-                    <li>Acessórios</li>
-                    <li>Ofertas</li>
-                </ul>
-            </details>
-
-            <details style="display: inline-block; margin-right: 15px;">
-                <summary style="cursor: pointer;">PS4</summary>
-                <ul style="list-style: none; padding: 10px; border: 1px solid #ddd; background: white; position: absolute;">
-                    <li>Jogos de PS4</li>
-                    <li>Acessórios</li>
-                    <li>Ofertas</li>
-                </ul>
-            </details>
-
-            <details style="display: inline-block; margin-right: 15px;">
-                <summary style="cursor: pointer;">Serviços</summary>
-                <ul style="list-style: none; padding: 10px; border: 1px solid #ddd; background: white; position: absolute;">
-                    <li>PlayStation Plus</li>
-                    <li>PS Now</li>
-                    <li>PS Store</li>
-                </ul>
-            </details>
-
-            <details style="display: inline-block; margin-right: 15px;">
-                <summary style="cursor: pointer;">Acessórios</summary>
-                <ul style="list-style: none; padding: 10px; border: 1px solid #ddd; background: white; position: absolute;">
-                    <li>Controle DualSense</li>
-                    <li>Headsets</li>
-                    <li>Outros</li>
-                </ul>
-            </details>
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">Jogos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Explorar por gênero</a></li>
+                        <li><a href="#">PlayStation Indies</a></li>
+                        <li><a href="#">Grátis para Jogar</a></li>
+                        <li><a href="#">Ofertas e promoções</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">PS5</a>
+                    <ul class="submenu">
+                        <li><a href="#">Jogos de PS5</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">PS4</a>
+                    <ul class="submenu">
+                        <li><a href="#">Jogos de PS4</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Serviços</a>
+                    <ul class="submenu">
+                        <li><a href="#">PlayStation Plus</a></li>
+                        <li><a href="#">PS Now</a></li>
+                        <li><a href="#">PS Store</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Acessórios</a>
+                    <ul class="submenu">
+                        <li><a href="#">Controle DualSense</a></li>
+                        <li><a href="#">Headsets</a></li>
+                        <li><a href="#">Outros</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
 
-        <!-- Barra de pesquisa e login -->
-        <div style="display: flex; align-items: center;">
-            <input type="text" placeholder="Pesquisar..." style="padding: 5px; border: 1px solid #ddd;">
-            <button style="margin-left: 10px; background: blue; color: white; border: none; padding: 5px 10px;">Iniciar Sessão</button>
+        <div class="search-login">
+            <input type="text" placeholder="Pesquisar..." class="search-bar">
+            <button class="login-btn">Iniciar Sessão</button>
         </div>
     </header>
 
+    <script src="script.js"></script>
 </body>
 </html>
