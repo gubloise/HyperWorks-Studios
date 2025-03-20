@@ -1,23 +1,28 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
+    background: #001f3f; /* Azul escuro */
     padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 3px solid #ffcc00;
 }
 
-.logo img {
-    height: 30px;
+/* Logo */
+.logo h1 {
+    color: white;
+    font-size: 20px;
 }
 
+/* Menu */
 .menu {
     list-style: none;
     display: flex;
@@ -30,12 +35,19 @@
 
 .menu a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
     padding: 10px;
     display: block;
 }
 
+.menu a:hover {
+    background: #ffcc00;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Submenu */
 .submenu {
     display: none;
     position: absolute;
@@ -61,6 +73,7 @@
     display: block;
 }
 
+/* Barra de pesquisa e botão */
 .search-login {
     display: flex;
     align-items: center;
@@ -68,14 +81,21 @@
 
 .search-bar {
     padding: 5px;
-    border: 1px solid #ddd;
+    border: 2px solid #ffcc00;
     margin-right: 10px;
+    border-radius: 5px;
 }
 
 .login-btn {
-    background: blue;
-    color: white;
+    background: #ffcc00;
+    color: black;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background: white;
 }
