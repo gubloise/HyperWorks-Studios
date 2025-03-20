@@ -19,3 +19,17 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 
+#login-btn, #logout-btn {
+  background: linear-gradient(to right, #0070d1, #003087);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#login-btn:hover, #logout-btn:hover {
+  background: linear-gradient(to right, #005bb5, #001f5b);
+}
