@@ -2,12 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "SUA-API-KEY",
-    authDomain: "SEU-DOMÍNIO.firebaseapp.com",
-    projectId: "SEU-PROJECT-ID",
-    storageBucket: "SEU-BUCKET.appspot.com",
-    messagingSenderId: "SEU-SENDER-ID",
-    appId: "SEU-APP-ID"
+  apiKey: "AIzaSyBk1sihrx8Zdj5yQ-eb82nc0TFHUG865IQ",
+  authDomain: "hyperworks-studios.firebaseapp.com",
+  projectId: "hyperworks-studios",
+  storageBucket: "hyperworks-studios.firebasestorage.app",
+  messagingSenderId: "458793278158",
+  appId: "1:458793278158:web:3b4e04750c5658b215ce9f",
+  measurementId: "G-Y5R259CL1V"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -22,4 +23,17 @@ document.getElementById("login-btn").addEventListener("click", () => {
         .catch((error) => {
             console.error("Erro no login:", error);
         });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener("mouseover", function() {
+            this.querySelector(".submenu").style.display = "block";
+        });
+
+        dropdown.addEventListener("mouseleave", function() {
+            this.querySelector(".submenu").style.display = "none";
+        });
+    });
 });
