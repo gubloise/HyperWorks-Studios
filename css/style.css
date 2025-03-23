@@ -3,99 +3,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* Estilo da barra */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #001f3f; /* Azul escuro */
-    padding: 15px 30px;
-    border-bottom: 3px solid #ffcc00;
-}
-
-/* Logo */
-.logo h1 {
-    color: white;
-    font-size: 20px;
-}
-
-/* Menu */
-.menu {
-    list-style: none;
-    display: flex;
-}
-
-.menu li {
-    position: relative;
-    margin-right: 20px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    display: block;
-}
-
-.menu a:hover {
-    background: #ffcc00;
-    color: black;
-    border-radius: 5px;
-}
-
-/* Submenu */
-.submenu {
-    display: none;
-    position: absolute;
-    background: white;
-    border: 1px solid #ddd;
-    list-style: none;
-    padding: 10px 0;
-    width: 200px;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-}
-
-.submenu li {
-    padding: 10px;
-}
-
-.submenu a {
-    color: black;
-    font-weight: normal;
-}
-
-.menu li:hover .submenu {
-    display: block;
-}
-
-/* Barra de pesquisa e botão */
-.search-login {
+    width: 100%;
+    background: linear-gradient(90deg, #000428, #004e92);
     display: flex;
     align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.search-bar {
-    padding: 5px;
-    border: 2px solid #ffcc00;
-    margin-right: 10px;
-    border-radius: 5px;
+/* Estilo dos itens */
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-.login-btn {
-    background: #ffcc00;
-    color: black;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
+.nav-item:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
-.login-btn:hover {
-    background: white;
+/* Ícones personalizados */
+.nav-item img {2 Sem Título_20250311220051.png
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
