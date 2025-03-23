@@ -39,4 +39,7 @@
     height: 30px;
     vertical-align: middle;
     margin-right: 8px;
+               
+               body {
+    background-color: red !important;
 }
