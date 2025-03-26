@@ -105,3 +105,18 @@ footer {
     width: 30px; /* 🔹 Tamanho dos ícones */
     height: 30px;
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+    background: linear-gradient(45deg, #c59d5f, #b8860b, #c59d5f);
+    background-size: 400% 400%;
+    animation: liquidGold 8s infinite linear;
+}
+
+/* Animação do fundo fluindo */
+@keyframes liquidGold {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
