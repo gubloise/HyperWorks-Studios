@@ -127,3 +127,63 @@ body {
 h1, h2, h3, p, a, span, li {
     color: black; /* Força títulos, parágrafos e links a ficarem pretos */
 }
+/* Estilizando a barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Fundo branco */
+    padding: 15px 40px;
+    border-bottom: 2px solid gold; /* Linha dourada para destaque */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 40px; /* Ajuste conforme necessário */
+}
+
+/* Itens do menu */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black; /* Letras pretas */
+    font-weight: bold;
+}
+
+.navbar nav ul li a:hover {
+    color: gold; /* Efeito dourado ao passar o mouse */
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    padding: 8px;
+    border: 1px solid gold;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Botão de Iniciar Sessão */
+.login-btn {
+    background-color: black;
+    color: gold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: gold;
+    color: black;
+}
