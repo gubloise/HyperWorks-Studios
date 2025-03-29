@@ -1,113 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HyperWorks Studios</title>
+    <title>Meu Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="imagens/2 Sem Título_20250311220051.png" alt="Hyperworks Studios">
+            <img src="logo.png" alt="Logo">
         </div>
         <ul class="nav-links">
             <li><a href="#">Início</a></li>
-            <li><a href="#">Jogos</a></li>
-            <li><a href="#">Notícias</a></li>
-            <li><a href="#">Loja</a></li>
+            <li class="dropdown">
+                <a href="#">Jogos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">RPG</a></li>
+                    <li><a href="#">Esporte</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Notícias</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Atualizações</a></li>
+                    <li><a href="#">Eventos</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Loja</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Consoles</a></li>
+                    <li><a href="#">Acessórios</a></li>
+                </ul>
+            </li>
             <li><a href="#">Sobre Nós</a></li>
             <li><a href="#">Suporte</a></li>
         </ul>
         <a href="#" class="login-button">Iniciar Sessão</a>
     </nav>
 
+    <!-- Barrinha dourada -->
     <div class="gold-bar"></div>
 
-    <!-- 🔹 Menu Fixo -->
-    <header>
-        <div class="logo">HyperWorks Studios</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#jogos">Jogos</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#loja">Loja</a></li>
-                <li><a href="#suporte">Suporte</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- 🔹 Início -->
-    <section id="inicio">
-        <h1>Bem-vindo à HyperWorks Studios</h1>
-        <p>Transformando ideias em realidade.</p>
-    </section>
-
-    <!-- 🔹 Jogos -->
-    <section id="jogos">
-        <h2>Nossos Jogos</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="imagens/jogo1.jpg" alt="Jogo 1">
-                <h3>Raindrop Café</h3>
-                <p>Um jogo incrível sobre cafés e desafios.</p>
-                <button onclick="saibaMais()">Saiba mais</button>
-            </div>
-            <!-- Adicione mais jogos aqui -->
-        </div>
-    </section>
-
-    <!-- 🔹 Produtos -->
-    <section id="produtos">
-        <h2>Nosso Console</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="imagens/neon-x.jpg" alt="Neon-X">
-                <h3>Neon-X</h3>
-                <p>O futuro dos consoles portáteis.</p>
-                <button onclick="saibaMais()">Saiba mais</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🔹 Notícias -->
-    <section id="noticias">
-        <h2>Últimas Notícias</h2>
-        <p>Fique por dentro dos lançamentos e novidades!</p>
-    </section>
-
-    <!-- 🔹 Loja -->
-    <section id="loja">
-        <h2>Onde Comprar</h2>
-        <p>Escolha seu revendedor oficial.</p>
-    </section>
-
-    <!-- 🔹 Suporte -->
-    <section id="suporte">
-        <h2>Suporte</h2>
-        <p>Precisa de ajuda? Estamos aqui para isso.</p>
-    </section>
-
-    <!-- 🔹 Sobre Nós -->
-    <section id="sobre">
-        <h2>Sobre a HyperWorks Studios</h2>
-        <p>Conheça nossa história e missão.</p>
-    </section>
-
-    <!-- 🔹 Rodapé -->
-    <footer>
-        <div class="social">
-            <div class="logo">
-            <img src="imagens/Imagem do WhatsApp de 2025-03-26 à(s) 16.50.45_a5a51118.jpg"
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-        </div>
-        <p>© 2025 HyperWorks Studios - Todos os direitos reservados.</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
