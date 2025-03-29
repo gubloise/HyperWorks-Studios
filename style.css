@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav a {
-    color: gold;
+    color: white;
     text-decoration: none;
     font-weight: normal; /* 🔹 Letras mais finas */
 }
@@ -83,7 +83,7 @@ button {
 }
 
 button:hover {
-    background: orange;
+    background: white;
 }
 
 /* 🔹 Rodapé */
@@ -102,7 +102,7 @@ footer {
 }
 
 .social img {
-    width: 30px; /* 🔹 Tamanho dos ícones */
+    width: 60px; /* 🔹 Tamanho dos ícones */
     height: 60px;
 }
 body {
@@ -143,7 +143,7 @@ h1, h2, h3, p, a, span, li {
 
 /* Logo */
 .logo img {
-    height: 40px; /* Ajuste conforme necessário */
+    height: 60px; /* Ajuste conforme necessário */
 }
 
 /* Itens do menu */
@@ -161,7 +161,7 @@ h1, h2, h3, p, a, span, li {
 }
 
 .navbar nav ul li a:hover {
-    color: gold; /* Efeito dourado ao passar o mouse */
+    color: white; /* Efeito dourado ao passar o mouse */
 }
 
 /* Barra de pesquisa */
