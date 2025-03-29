@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: white;
-    color: gold;
+    color: white;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ header {
     top: 0;
     left: 0;
     background: white;
-    color: gold;
+    color: white;
     display: flex;
     justify-content: space-between;
     padding: 15px 30px;
@@ -103,7 +103,7 @@ footer {
 
 .social img {
     width: 30px; /* 🔹 Tamanho dos ícones */
-    height: 30px;
+    height: 60px;
 }
 body {
     margin: 0;
