@@ -150,7 +150,7 @@ h1, h2, h3, p, a, span, li {
 .navbar nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .navbar nav ul li a {
