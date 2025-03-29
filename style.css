@@ -1,133 +1,128 @@
-/* Reset básico */
-* {
+/* Estilos gerais */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    background-color: white;
 }
 
-/* Corpo da página */
-body {
-    background-color: white; /* Fundo branco */
-}
-
-/* Navbar fixa no topo */
+/* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: white;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: white;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 70px; /* Altura igual ao do PlayStation */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-/* Logo na navbar */
-.navbar .logo {
-    height: 40px;
+/* Logo */
+.logo img {
+    height: 40px; /* Ajuste o tamanho da logo */
 }
 
-/* Itens do menu */
+/* Links da navbar */
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 25px;
 }
 
 .nav-links li {
     position: relative;
-    margin: 0 20px;
 }
 
 .nav-links a {
     text-decoration: none;
+    color: black;
     font-size: 16px;
     font-weight: bold;
-    color: black;
     padding: 10px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: gold;
+    color: goldenrod;
 }
 
-/* Estilo do botão Iniciar Sessão */
-.iniciar-sessao {
+/* Animação da barrinha dourada */
+.nav-links li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FFAA00);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li:hover::after {
+    transform: scaleX(1);
+}
+
+/* Botão de login */
+.login-button {
     background-color: black;
     color: gold;
     padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.iniciar-sessao:hover {
-    background-color: gold;
-    color: black;
-}
-
-/* Dropdown */
-.nav-links li:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    top: 40px;
-    left: 0;
-    min-width: 180px;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: black;
-    font-weight: normal;
     text-decoration: none;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.dropdown-content a:hover {
-    background-color: gold;
+.login-button:hover {
+    background-color: goldenrod;
+    color: black;
 }
 
-/* Linha dourada animada abaixo da navbar */
-.navbar::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Barrinha dourada brilhosa */
+.gold-bar {
+    position: fixed;
+    top: 60px;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, gold, orange, gold);
-    animation: brilho 2s infinite linear;
+    background: linear-gradient(90deg, #FFD700, #FFAA00);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
 }
 
-@keyframes brilho {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.5; }
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    width: 150px;
 }
 
-/* Estilo para os links do dropdown */
-.dropdown-content a {
-    font-size: 14px;
+.dropdown-menu li {
+    padding: 10px;
 }
 
-/* Estilização geral da página */
-.container {
-    padding: 100px 50px;
-    text-align: center;
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f8f8;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
