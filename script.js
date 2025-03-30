@@ -1,31 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown");
+    const navItems = document.querySelectorAll(".nav-links li");
 
-    dropdowns.forEach((dropdown) => {
-        const link = dropdown.querySelector("a");
-        const submenu = dropdown.querySelector(".submenu");
-
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            // Fecha todos os submenus antes de abrir o atual
-            document.querySelectorAll(".submenu").forEach((menu) => {
-                if (menu !== submenu) {
-                    menu.classList.remove("active");
+    navItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            const dropdown = this.querySelector(".dropdown");
+            
+            // Fecha todos os dropdowns antes de abrir um novo
+            document.querySelectorAll(".dropdown").forEach((d) => {
+                if (d !== dropdown) {
+                    d.classList.remove("active");
                 }
             });
 
-            // Ativa/desativa o submenu atual
-            submenu.classList.toggle("active");
+            // Alterna o dropdown clicado
+            if (dropdown) {
+                dropdown.classList.toggle("active");
+            }
         });
     });
 
-    // Fecha os submenus ao clicar fora
+    // Fecha os dropdowns ao clicar fora
     document.addEventListener("click", function (event) {
-        if (!event.target.closest(".dropdown")) {
-            document.querySelectorAll(".submenu").forEach((menu) => {
-                menu.classList.remove("active");
+        if (!event.target.closest(".nav-links li")) {
+            document.querySelectorAll(".dropdown").forEach((d) => {
+                d.classList.remove("active");
             });
         }
     });
 });
+
