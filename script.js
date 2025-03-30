@@ -1,9 +1,27 @@
-// Ativa os menus suspensos ao passar o mouse
-document.querySelectorAll('.dropdown').forEach(menu => {
-    menu.addEventListener('mouseenter', () => {
-        menu.querySelector('.submenu').style.display = 'block';
+document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll(".nav-links li");
+
+    navItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            // Fecha todos os dropdowns antes de abrir um novo
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+                dropdown.style.display = "none";
+            });
+
+            // Alterna o dropdown do item clicado
+            let dropdown = this.querySelector(".dropdown");
+            if (dropdown) {
+                dropdown.style.display = "block";
+            }
+        });
     });
-    menu.addEventListener('mouseleave', () => {
-        menu.querySelector('.submenu').style.display = 'none';
+
+    // Fecha os dropdowns se clicar fora
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".nav-links li")) {
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+                dropdown.style.display = "none";
+            });
+        }
     });
 });
