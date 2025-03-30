@@ -1,4 +1,4 @@
-/* Reset */
+/* Estilos gerais */
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
 
 /* Logo */
 .logo img {
-    height: 40px;
+    height: 40px; /* Ajuste o tamanho da logo */
 }
 
 /* Links da navbar */
@@ -38,7 +38,6 @@ body {
     position: relative;
 }
 
-/* Links dourados brilhantes */
 .nav-links a {
     text-decoration: none;
     color: black;
@@ -46,15 +45,14 @@ body {
     font-weight: bold;
     padding: 10px;
     transition: color 0.3s;
-    position: relative;
 }
 
 .nav-links a:hover {
     color: goldenrod;
 }
 
-/* Efeito de brilho dourado */
-.nav-links a::before {
+/* Animação da barrinha dourada */
+.nav-links li::after {
     content: "";
     position: absolute;
     left: 0;
@@ -62,12 +60,11 @@ body {
     width: 100%;
     height: 3px;
     background: linear-gradient(90deg, #FFD700, #FFAA00);
-    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-links a:hover::before {
+.nav-links li:hover::after {
     transform: scaleX(1);
 }
 
@@ -94,45 +91,6 @@ body {
     width: 100%;
     height: 5px;
     background: linear-gradient(90deg, #FFD700, #FFAA00);
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
-}
-}
-
-/* Submenus */
-.submenu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 30px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    border-radius: 5px;
-    min-width: 200px;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Submenu - animação */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Submenu - espaçamento melhorado */
-.submenu span {
-    display: block;
-    padding: 5px 0;
-    font-weight: bold;
-    color: black;
-}
-
-/* Mostrar submenu ao clicar */
-.dropdown .submenu.active {
-    display: block;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
+    z-index: 999;
 }
