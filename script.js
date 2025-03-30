@@ -1,31 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const navItems = document.querySelectorAll(".nav-links li");
-
-    navItems.forEach((item) => {
-        item.addEventListener("click", function () {
-            const dropdown = this.querySelector(".dropdown");
-            
-            // Fecha todos os dropdowns antes de abrir um novo
-            document.querySelectorAll(".dropdown").forEach((d) => {
-                if (d !== dropdown) {
-                    d.classList.remove("active");
-                }
-            });
-
-            // Alterna o dropdown clicado
-            if (dropdown) {
-                dropdown.classList.toggle("active");
-            }
-        });
+// Ativa os menus suspensos ao passar o mouse
+document.querySelectorAll('.dropdown').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+        menu.querySelector('.submenu').style.display = 'block';
     });
-
-    // Fecha os dropdowns ao clicar fora
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".nav-links li")) {
-            document.querySelectorAll(".dropdown").forEach((d) => {
-                d.classList.remove("active");
-            });
-        }
+    menu.addEventListener('mouseleave', () => {
+        menu.querySelector('.submenu').style.display = 'none';
     });
 });
-
