@@ -1,4 +1,4 @@
-/* Estilos gerais */
+/* Reset */
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
 
 /* Logo */
 .logo img {
-    height: 40px; /* Ajuste o tamanho da logo */
+    height: 40px;
 }
 
 /* Links da navbar */
@@ -38,6 +38,7 @@ body {
     position: relative;
 }
 
+/* Links dourados brilhantes */
 .nav-links a {
     text-decoration: none;
     color: black;
@@ -45,14 +46,15 @@ body {
     font-weight: bold;
     padding: 10px;
     transition: color 0.3s;
+    position: relative;
 }
 
 .nav-links a:hover {
     color: goldenrod;
 }
 
-/* Animação da barrinha dourada */
-.nav-links li::after {
+/* Efeito de brilho dourado */
+.nav-links a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -60,11 +62,12 @@ body {
     width: 100%;
     height: 3px;
     background: linear-gradient(90deg, #FFD700, #FFAA00);
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-links li:hover::after {
+.nav-links a:hover::before {
     transform: scaleX(1);
 }
 
@@ -84,7 +87,7 @@ body {
     color: black;
 }
 
-/* Barrinha dourada brilhosa */
+/* Linha dourada brilhante */
 .gold-bar {
     position: fixed;
     top: 60px;
@@ -94,35 +97,41 @@ body {
     box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
+/* Submenus */
+.submenu {
     display: none;
     position: absolute;
-    top: 40px;
     left: 0;
+    top: 30px;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
     border-radius: 5px;
-    list-style: none;
-    padding: 10px 0;
-    width: 150px;
+    min-width: 200px;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-.dropdown-menu li {
-    padding: 10px;
+/* Submenu - animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.dropdown-menu a {
-    color: black;
-    text-decoration: none;
+/* Submenu - espaçamento melhorado */
+.submenu span {
     display: block;
-    padding: 10px;
+    padding: 5px 0;
+    font-weight: bold;
+    color: black;
 }
 
-.dropdown-menu a:hover {
-    background-color: #f8f8f8;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
+/* Mostrar submenu ao passar o mouse */
+.dropdown:hover .submenu {
+    display: block;
 }
