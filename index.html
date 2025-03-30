@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Navbar Hyperworks</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="imagens/2 Sem Título_20250311220051.png" alt="Logo">
+            <img src="imagens/2 Sem Título_20250311220051.png" alt="Hyperworks Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="#">Início</a></li>
             <li class="dropdown">
                 <a href="#">Jogos</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Ação</a></li>
-                    <li><a href="#">RPG</a></li>
-                    <li><a href="#">Esporte</a></li>
-                </ul>
+                <div class="submenu">
+                    <span>Neon-X</span>
+                </div>
             </li>
             <li class="dropdown">
                 <a href="#">Notícias</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Atualizações</a></li>
-                    <li><a href="#">Eventos</a></li>
-                </ul>
+                <div class="submenu">
+                    <span>Hyper Notices</span>
+                </div>
             </li>
             <li class="dropdown">
                 <a href="#">Loja</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Consoles</a></li>
-                    <li><a href="#">Acessórios</a></li>
-                </ul>
+                <div class="submenu">
+                    <span>PlayStation Store</span>
+                </div>
             </li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Suporte</a></li>
+            <li class="dropdown">
+                <a href="#">Sobre Nós</a>
+                <div class="submenu">
+                    <span>Conheça a história da Hyperworks Studios</span>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Suporte</a>
+                <div class="submenu">
+                    <span>Suporte</span>
+                    <span>Status da HSN</span>
+                </div>
+            </li>
         </ul>
         <a href="#" class="login-button">Iniciar Sessão</a>
     </nav>
 
-    <!-- Barrinha dourada -->
+    <!-- Linha dourada brilhante -->
     <div class="gold-bar"></div>
 
-    <script src="script.js"></script>
+    <!-- Conteúdo só pra preencher o site -->
+    <div class="content">
+        <h1>Bem-vindo ao site da Hyperworks</h1>
+        <p>Explore nossos jogos, notícias e mais!</p>
+    </div>
 </body>
 </html>
