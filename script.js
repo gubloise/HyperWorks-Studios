@@ -1,28 +1,16 @@
-// Script para abrir e fechar o dropdown menu ao clicar
-document.addEventListener("DOMContentLoaded", function() {
-    let dropdowns = document.querySelectorAll(".dropdown");
+// Garantir que os menus abrem apenas quando necessário
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown");
 
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener("click", function(event) {
-            event.stopPropagation(); // Impede que o clique feche automaticamente o menu
-            let dropdownMenu = this.querySelector(".dropdown-menu");
-            
-            // Fecha todos os menus antes de abrir um novo
-            document.querySelectorAll(".dropdown-menu").forEach(menu => {
-                if (menu !== dropdownMenu) {
-                    menu.style.display = "none";
-                }
-            });
+    dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("mouseover", function () {
+            const submenu = this.querySelector(".submenu");
+            submenu.style.display = "block";
+        });
 
-            // Alterna a exibição do menu clicado
-            dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+        dropdown.addEventListener("mouseleave", function () {
+            const submenu = this.querySelector(".submenu");
+            submenu.style.display = "none";
         });
     });
-
-    // Fecha o menu se clicar fora dele
-    document.addEventListener("click", function() {
-        document.querySelectorAll(".dropdown-menu").forEach(menu => {
-            menu.style.display = "none";
-        });
-    });
 });
