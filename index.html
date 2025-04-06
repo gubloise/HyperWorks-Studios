@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Estilizada</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Hyperworks Studios</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Hyperworks Studios">
+    </div>
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="PlayStation Logo">
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="#">Jogos</a>
-                <div class="dropdown"></div>
-            </li>
-            <li>
-                <a href="#">PS5</a>
-                <div class="dropdown"></div>
-            </li>
-            <li>
-                <a href="#">PS4</a>
-                <div class="dropdown"></div>
-            </li>
-            <li>
-                <a href="#">Serviços</a>
-                <div class="dropdown"></div>
-            </li>
-            <li>
-                <a href="#">Acessórios
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a href="#">Jogos</a>
+        <ul class="dropdown">
+          <!-- Coloca os subtítulos aqui depois -->
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">Serviços</a>
+        <ul class="dropdown"></ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">Acessórios</a>
+        <ul class="dropdown"></ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">Notícias</a>
+        <ul class="dropdown"></ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">Suporte</a>
+        <ul class="dropdown"></ul>
+      </li>
+    </ul>
+
+    <a href="#" class="login-button">Iniciar sessão</a>
+  </header>
+
+  <div class="gold-bar"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
