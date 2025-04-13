@@ -1,119 +1,125 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
+  box-sizing: border-box;
 }
 
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Navbar estilo PlayStation */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
-  background: white;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-/* Logo */
-.logo img {
-  height: 40px;
-}
-
-/* Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item {
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
   position: relative;
 }
 
-.nav-links a {
+/* Itens da navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.navbar a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s;
+  color: #d4af37;  /* cor dourada */
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  /* Para o efeito de brilho via sombra */
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.7);
 }
 
-.nav-links a:hover {
-  color: goldenrod;
-}
-
-/* Animação da linha dourada */
-.nav-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #FFD700, #FFAA00);
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-item:hover::after {
-  transform: scaleX(1);
-}
-
-/* Botão de login */
-.login-button {
-  background-color: black;
-  color: gold;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  margin-left: auto;
-}
-
-.login-button:hover {
-  background-color: goldenrod;
-  color: black;
+/* Efeito de brilho dourado ao passar o mouse */
+.navbar a:hover {
+  animation: glowGold 1.5s infinite;
 }
 
 /* Linha dourada abaixo da navbar */
-.gold-bar {
-  position: fixed;
-  top: 60px;
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #FFD700, #FFAA00);
-  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
-  z-index: 999;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.8) 50%, rgba(212,175,55,0) 100%);
+  filter: drop-shadow(0 0 5px rgba(212,175,55,0.8));
 }
 
-/* Dropdown escondido até clicar */
-.dropdown {
+/* Animação de brilho dourado */
+@keyframes glowGold {
+  0% {
+    text-shadow: 0 0 5px rgba(212,175,55,0.7), 0 0 10px rgba(212,175,55,0.7);
+    color: #d4af37;
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(212,175,55,1), 0 0 20px rgba(212,175,55,1);
+    color: #ffd700;
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(212,175,55,0.7), 0 0 10px rgba(212,175,55,0.7);
+    color: #d4af37;
+  }
+}
+
+/* Botão de login igual ao do site da PlayStation */
+.btn-login {
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #d4af37;
+  color: #121212;
+}
+
+/* Submenu - títulos que aparecem ao clicar */
+.navbar li .submenu {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  display: none;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  border-radius: 4px;
-  min-width: 150px;
-  z-index: 999;
+  background-color: #1a1a1a;
+  padding: 0.5rem 0;
+  border: 1px solid #333;
+  border-top: none;
+  min-width: 180px;
+  z-index: 100;
 }
 
-.dropdown li {
-  padding: 10px;
-  white-space: nowrap;
-}
-
-.nav-item.active .dropdown {
+.navbar li.active .submenu {
   display: block;
+}
+
+.navbar li .submenu li {
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+.navbar li .submenu li a {
+  color: #d4af37;
+  font-size: 0.95rem;
+}
+
+/* Efeito hover para itens do submenu */
+.navbar li .submenu li a:hover {
+  background-color: #333;
 }
