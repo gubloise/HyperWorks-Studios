@@ -22,61 +22,48 @@
 
     .navbar {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      justify-content: space-between;
+      padding: 0.5rem 1.5rem;
       background-color: #111;
+      border-bottom: 2px solid gold;
+      box-shadow: 0 0 5px gold;
       position: sticky;
       top: 0;
       z-index: 999;
-      border-bottom: 3px solid gold;
-      box-shadow: 0 0 10px gold;
     }
 
-    .navbar ul {
+    .logo img {
+      height: 35px;
+    }
+
+    nav ul {
       display: flex;
       list-style: none;
+      gap: 1.5rem;
     }
 
-    .navbar li {
-      margin: 0 1rem;
-    }
-
-    .navbar a {
+    nav a {
       color: gold;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-shadow: 0 0 3px rgba(255, 215, 0, 0.6);
       transition: 0.3s;
-      text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
     }
 
-    .navbar a:hover {
-      color: #ffd700;
+    nav a:hover {
+      color: #fff3a3;
       text-shadow: 0 0 10px rgba(255, 215, 0, 1);
     }
 
-    .btn-login {
-      background: transparent;
-      border: 2px solid gold;
-      color: gold;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn-login:hover {
-      background: gold;
-      color: #111;
-    }
-
-    .hero {
+    .hero, .vendas, .projeto {
       padding: 4rem 2rem;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
 
@@ -89,11 +76,6 @@
       max-width: 90%;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    }
-
-    .vendas, .projeto, .contato {
-      padding: 3rem 2rem;
-      text-align: center;
     }
 
     .vendas h2, .projeto h2, .contato h2 {
@@ -125,6 +107,18 @@
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
     }
 
+    .contato {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      color: #111;
+      text-align: center;
+    }
+
+    .contato h2 {
+      color: #111;
+      text-shadow: none;
+    }
+
     .contato form {
       max-width: 500px;
       margin: 0 auto;
@@ -136,7 +130,7 @@
     .contato input, .contato textarea {
       padding: 0.75rem;
       border-radius: 5px;
-      border: none;
+      border: 1px solid #ccc;
     }
 
     footer {
@@ -150,17 +144,15 @@
 <body>
   <header class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Px Portable Logo" height="40" />
+      <img src="logo.png" alt="Px Portable Logo" />
     </div>
     <nav>
       <ul>
-        <li><a href="#home">Início</a></li>
         <li><a href="#vendas">Comprar</a></li>
-        <li><a href="#projeto">Projeto</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#contato">Suporte</a></li>
+        <li><a href="#projeto">Menu</a></li>
       </ul>
     </nav>
-    <button class="btn-login">Login</button>
   </header>
 
   <section id="home" class="hero">
