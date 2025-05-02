@@ -1,6 +1,4 @@
-// script.js
-
-// Scroll suave
+// Scroll suave para âncoras (opcional)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -11,10 +9,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// Menu toggle (se quiser usar em mobile depois)
+// Menu futuro
 const menuBtn = document.querySelector(".btn-menu");
 if (menuBtn) {
   menuBtn.addEventListener("click", () => {
-    alert("O menu será ativado em breve.");
+    alert("Menu completo será implementado em breve.");
   });
 }
