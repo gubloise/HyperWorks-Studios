@@ -1,155 +1,20 @@
-/* Reset e estrutura */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// script.js
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #111;
-}
+// Scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
-/* NAVBAR */
-.main-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 2px solid #ccc;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar-left .logo {
-  height: 30px;
-}
-
-.navbar-center ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-
-.navbar-center a {
-  text-decoration: none;
-  color: #111;
-  font-weight: 600;
-  font-size: 1rem;
-  border-bottom: 2px solid transparent;
-  transition: 0.3s;
-}
-
-.navbar-center a:hover {
-  color: red;
-  border-bottom: 2px solid red;
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.btn-login,
-.btn-menu {
-  background: none;
-  border: 1px solid #ccc;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-login:hover,
-.btn-menu:hover {
-  background-color: #eee;
-}
-
-.lang-select {
-  padding: 0.3rem;
-  font-weight: 600;
-}
-
-/* HERO SECTION */
-.hero-block {
-  background-color: #e60012;
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.hero-logo {
-  height: 100px;
-  margin-bottom: 1rem;
-}
-
-.hero-block h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.data-lancamento {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn-primary {
-  display: inline-block;
-  background-color: white;
-  color: #e60012;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #ffd3d8;
-}
-
-/* GRID DE IMAGENS */
-.hero-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 3rem;
-}
-
-.hero-grid img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-/* VÍDEO */
-.video-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #f7f7f7;
-}
-
-.video-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.video-container {
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-/* RODAPÉ */
-.footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
+// Menu toggle (se quiser usar em mobile depois)
+const menuBtn = document.querySelector(".btn-menu");
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    alert("O menu será ativado em breve.");
+  });
 }
